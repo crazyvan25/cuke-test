@@ -1,11 +1,18 @@
 # cuke-test
-Small repo to play around with cucumber-jvm8, testing and Guice
+Small repo to play around with:
+
+* cucumber-java8: https://cucumber.io/docs/installation/java/
+* TestNG: https://cucumber.io/docs/installation/java/
+* Google Guice: https://cucumber.io/docs/cucumber/state/#dependency-injection
+
 
 # To run
-After installing Maven with brew, in a terminal run:
+* Install java 13: <code>brew cask install java</code>
+* Install Maven: <code>brew install maven</code>
 
-<code> mvn install </code>
+In a terminal run:
+<code>mvn install</code>
 
-To execute tests, run:
+To execute tests only, run:
 
-<code> mvn verify </verify>
+<code>mvn verify</verify>
