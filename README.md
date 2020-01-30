@@ -14,5 +14,4 @@ In a terminal run:
 <code>mvn install</code>
 
 To execute tests only, run:
-
 <code>mvn verify</verify>
