@@ -2,7 +2,7 @@
 Small repo to play around with:
 
 * cucumber-java8: https://cucumber.io/docs/installation/java/
-* TestNG: https://cucumber.io/docs/installation/java/
+* TestNG: https://testng.org/doc/index.html
 * Google Guice: https://cucumber.io/docs/cucumber/state/#dependency-injection
 
 
