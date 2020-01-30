@@ -14,4 +14,6 @@ In a terminal run:
 <code>mvn install</code>
 
 To execute tests only, run:
-<code>mvn verify</verify>
+<code>mvn verify</code>
+
+Each cucumber scenario is run by the TestNG runner in a separate thread.
