@@ -6,9 +6,9 @@ FROM openjdk:13-jdk-alpine
 # Alpine Linux package manager - add dependencies
 RUN apk add --no-cache curl tar bash
 
-ARG MAVEN_VERSION=3.6.3
-ARG USER_HOME_DIR="/root"
-ARG MAVEN_URL=http://apache.mirrors.nublue.co.uk/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
+ARG MAVEN_VERSION = 3.6.3
+ARG USER_HOME_DIR = "/root"
+ARG MAVEN_URL = http://apache.mirrors.nublue.co.uk/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
 
 RUN mkdir -p /usr/share/maven && \
 curl -fsSL $MAVEN_URL | tar -xzC /usr/share/maven --strip-components=1 && \
