@@ -3,7 +3,6 @@ package parallel;
 import com.google.inject.Inject;
 import io.cucumber.guice.ScenarioScoped;
 
-
 @ScenarioScoped
 class Dependency1 {
 
