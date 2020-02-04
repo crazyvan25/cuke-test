@@ -6,21 +6,21 @@ FROM openjdk:13-jdk-alpine
 # Alpine Linux package manager - add dependencies
 RUN apk add --no-cache curl tar bash
 
-ARG MAVEN_VERSION = 3.6.3
-ARG USER_HOME_DIR = "/root"
-ARG MAVEN_URL = http://apache.mirrors.nublue.co.uk/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
+ARG MAVEN_VERSION=3.6.3
+ARG ROOT_DIR="/root"
+ARG MAVEN_URL=http://apache.mirrors.nublue.co.uk/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz
 
 RUN mkdir -p /usr/share/maven && \
 curl -fsSL $MAVEN_URL | tar -xzC /usr/share/maven --strip-components=1 && \
 ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
 ENV MAVEN_HOME /usr/share/maven
-ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
+ENV MAVEN_CONFIG "$ROOT_DIR/.m2"
 
 # speed up Maven JVM
 ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 
-# run mvn as executable when running 'docker run'
+# run 'mvn' when running 'docker run'
 ENTRYPOINT ["/usr/bin/mvn"]
 # ---------------------------
 
