@@ -22,9 +22,7 @@ ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 
 # run mvn as executable when running docker run
 ENTRYPOINT ["/usr/bin/mvn"]
-
 # ---------------------------
-
 
 
 # ---------------------------
@@ -42,5 +40,4 @@ RUN mvn -T 1C install && rm -rf target
 
 # copy other source files and keep in image
 COPY src /usr/src/cuke-test/src
-
 # ---------------------------
