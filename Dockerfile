@@ -20,7 +20,7 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 # speed up Maven JVM
 ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 
-# run mvn as executable when running docker run
+# run mvn as executable when running 'docker run'
 ENTRYPOINT ["/usr/bin/mvn"]
 # ---------------------------
 
@@ -32,7 +32,7 @@ ENTRYPOINT ["/usr/bin/mvn"]
 RUN mkdir -p /usr/src/cuke-test
 WORKDIR /usr/src/cuke-test
 
-# install maven dependency packages and keep in image
+# install maven dependencies and keep in image
 COPY pom.xml /usr/src/cuke-test
 
 # run mvn install (this will only run when pom.xml is updated)
