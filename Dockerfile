@@ -26,7 +26,7 @@ ENTRYPOINT ["/usr/bin/mvn"]
 
 
 # ---------------------------
-# Install project
+# Download Maven dependencies
 
 # create source folder
 RUN mkdir -p /usr/src/cuke-test
